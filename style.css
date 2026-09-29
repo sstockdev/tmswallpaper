@@ -1,0 +1,82 @@
+:root {
+	--bg: rgb(18, 18, 23);
+	--cross: rgb(217, 191, 115);
+	--text: rgb(230, 230, 230);
+	--cross-size: 16px;
+	--text-size: 28px;
+	--glow: 0 0 12px var(--cross);  /* "Cross glow" off sets this to none */
+}
+
+html {
+	height: 100%;
+}
+
+body {
+	margin: 0;
+	height: 100%;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0 8vw;
+	box-sizing: border-box;
+	background: var(--bg);
+	color: var(--text);
+	user-select: none;
+}
+
+/* Click target for a random verse; the padding makes "near" the cross count too. */
+#content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 4vh;
+	padding: 4vh 4vw;
+}
+
+#cross {
+	margin: 0;
+	font-family: Consolas, "Courier New", monospace;
+	font-size: var(--cross-size);
+	line-height: 1.1;
+	color: var(--cross);
+	text-shadow: var(--glow);
+}
+
+#passage {
+	margin: 0;
+	max-width: 60ch;
+	text-align: center;
+	font-family: Georgia, "Times New Roman", serif;
+	font-size: var(--text-size);
+	line-height: 1.45;
+}
+
+#topic {
+	margin: 0 0 0.8em;
+	font-size: 0.55em;
+	letter-spacing: 0.15em;
+	text-transform: uppercase;
+	color: var(--cross);
+	opacity: 0.75;
+}
+
+#verse {
+	margin: 0;
+	font-style: italic;
+}
+
+#ref {
+	margin-top: 0.8em;
+	font-size: 0.7em;
+	letter-spacing: 0.12em;
+	text-transform: uppercase;
+	color: var(--cross);
+	opacity: 0.9;
+}
+
+#credit {
+	margin: 1.2em 0 0;
+	font-size: 0.4em;
+	opacity: 0.45;
+}
