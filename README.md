@@ -5,7 +5,7 @@ A simple Wallpaper Engine wallpaper that displays verses from [The Navigators' T
 
 ## Download
 
-You can subscribe to the wallpaper on [Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3810016670)!
+You can subscribe to the wallpaper on [Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3815876694)!
 
 ## Preview
 
