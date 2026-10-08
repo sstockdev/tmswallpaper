@@ -5,46 +5,26 @@
 	"file": "index.html",
 	"general": {
 		"properties": {
-			"bibleversion": {
-				"order": 0,
-				"text": "Bible version",
-				"type": "combo",
-				"value": "ESV",
-				"options": [
-					{
-						"label": "ESV - English Standard Version (word for word)",
-						"value": "ESV"
-					},
-					{
-						"label": "BSB - Berean Standard Bible (word for word)",
-						"value": "BSB"
-					},
-					{
-						"label": "FBV - Free Bible Version (thought for thought)",
-						"value": "FBV"
-					}
-				]
-			},
 			"backgroundcolor": {
-				"order": 1,
+				"order": 0,
 				"text": "Background color",
 				"type": "color",
 				"value": "0.07 0.07 0.09"
 			},
 			"crosscolor": {
-				"order": 2,
+				"order": 1,
 				"text": "Cross color",
 				"type": "color",
 				"value": "0.85 0.75 0.45"
 			},
 			"textcolor": {
-				"order": 3,
+				"order": 2,
 				"text": "Verse text color",
 				"type": "color",
 				"value": "0.9 0.9 0.9"
 			},
 			"crosssize": {
-				"order": 4,
+				"order": 3,
 				"text": "Cross size",
 				"type": "slider",
 				"value": 16,
@@ -53,7 +33,7 @@
 				"editable": true
 			},
 			"textsize": {
-				"order": 5,
+				"order": 4,
 				"text": "Verse text size",
 				"type": "slider",
 				"value": 28,
@@ -62,7 +42,7 @@
 				"editable": true
 			},
 			"glow": {
-				"order": 6,
+				"order": 5,
 				"text": "Cross glow",
 				"type": "bool",
 				"value": true

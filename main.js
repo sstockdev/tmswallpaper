@@ -4,7 +4,6 @@ var CYCLE_START = Date.UTC(2026, 8, 27);  // 27 Sep 2026
 var SHOWN_KEY = 'tms-shown';
 
 var data = null;
-var version = null;
 var shown = null;
 
 window.wallpaperPropertyListener = {
@@ -19,11 +18,6 @@ window.wallpaperPropertyListener = {
 		if (props.glow) {
 			if (props.glow.value) root.removeProperty('--glow');
 			else root.setProperty('--glow', 'none');
-		}
-
-		if (props.bibleversion) {
-			version = props.bibleversion.value;
-			if (data) render();
 		}
 	}
 };
@@ -79,15 +73,12 @@ function show(choice) {
 }
 
 function render() {
-	var versions = Object.keys(data.translations);
-	var translation = versions.indexOf(version) >= 0 ? version : versions[0];
 	var topic = data.topics[shown.topic];
 	var ref = topic.refs[shown.verse];
 
 	document.getElementById('topic').textContent = topic.series + ' · ' + topic.name;
-	document.getElementById('verse').textContent = data.translations[translation].verses[ref];
-	document.getElementById('ref').textContent = ref + ' ' + translation;
-	document.getElementById('credit').textContent = data.translations[translation].credit;
+	document.getElementById('verse').textContent = data.verses[ref];
+	document.getElementById('ref').textContent = ref + ' NASB 2020';
 }
 
 function showScheduledVerse() {
@@ -110,5 +101,7 @@ loadJson('verses.json', function (json) {
 	if (shown) render();
 	else showScheduledVerse();
 	document.getElementById('content').addEventListener('click', showRandomVerse);
+	// The Lockman link opens the site instead of changing the verse.
+	document.getElementById('lockman').addEventListener('click', function (e) { e.stopPropagation(); });
 	setInterval(showScheduledVerse, 60 * 1000);
 });
